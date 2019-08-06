@@ -1,0 +1,13 @@
+num=int(input())
+end=[]
+for index in range(num):
+    cho=input().split()
+    result=0
+    for i in range(int(cho[0])):
+        if i!=0:
+            result=result+1
+        for j in range(int(cho[1])-1):
+            result=result+1
+    end=end+[result]
+for i in end:
+    print(i)
