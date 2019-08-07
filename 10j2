@@ -1,0 +1,21 @@
+a=int(input())
+b=int(input())
+c=int(input())
+d=int(input())
+s=int(input())
+Nikky=s%(a+b)
+Byron=s%(c+d)
+Nikky_result=s//(a+b)*(a-b)
+Byron_result=s//(c+d)*(c-d)
+if Nikky>a:Nikky=a-(Nikky-a)
+else:Nikky=Nikky
+Nikky_result+=Nikky
+if Byron>c:Byron=c-(Byron-c)
+else:Byron=Byron
+Byron_result+=Byron
+if Nikky_result>Byron_result:
+    print("Nikky")
+elif Nikky_result<Byron_result:
+    print("Byron")
+else:
+    print("Tied")
