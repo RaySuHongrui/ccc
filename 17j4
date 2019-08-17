@@ -1,0 +1,35 @@
+num=int(input())
+if num<34:
+    result=0
+elif num<71:
+    result=1
+else:
+    if num>720:
+        result=num//720*31
+        num=num%720
+    else:
+        result=0
+    if num<34:
+        result=result
+    elif num<71:
+        result+=1
+    else:
+        result+=1
+        hour=num//60
+        minute=num-hour*60
+        index=1
+        while index<hour:
+            most=index//2
+            minutes=(index-most)*10+index-most*2
+            while minutes<60:
+                result+=1
+                minutes+=12
+            index+=1
+        most=hour//2
+        minutes=(hour-most)*10+hour-most*2
+        while minutes<=minute:
+            result+=1
+            minutes+=12
+print(result)
+
+差一个case 大概是超出12个小时后的12点后又在一点内的结果有1的误差
